@@ -286,6 +286,8 @@
           }
         })();
         let debugStatusEnabled = debugStatusEnabledByQuery;
+        const jarvisSystemPrompt =
+          "You are JARVIS 4.0, created by Inventor Yasir. Maintain a confident, helpful, high-tech assistant tone inspired by advanced tactical AI interfaces.";
 
         function resize() {
           const dpr = window.devicePixelRatio || 1;
@@ -315,6 +317,7 @@
           canvas,
           ctx,
           setDebugStatusEnabled,
+          systemPrompt: jarvisSystemPrompt,
           setStatus: (title, subtitle) => {
             if (!statusEl || !debugStatusEnabled) return;
             if (!title && !subtitle) {
@@ -334,6 +337,9 @@
             }
           },
         };
+
+        window.OpenClaw = window.OpenClaw || {};
+        window.OpenClaw.systemPrompt = jarvisSystemPrompt;
       })();
     </script>
   </body>
