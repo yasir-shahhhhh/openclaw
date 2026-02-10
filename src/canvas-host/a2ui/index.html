@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OpenClaw Canvas</title>
+    <title>JARVIS // Inventor Yasir Interface</title>
     <script>
       (() => {
         try {
@@ -177,13 +177,32 @@
         text-align: left;
         padding: 14px 16px 12px;
         border-radius: 16px;
-        background: linear-gradient(140deg, rgba(23, 24, 35, 0.78), rgba(18, 19, 28, 0.55));
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        background:
+          linear-gradient(140deg, rgba(8, 24, 46, 0.86), rgba(5, 15, 30, 0.65)),
+          radial-gradient(circle at 20% 18%, rgba(82, 194, 255, 0.25), transparent 58%);
+        border: 1px solid rgba(127, 225, 255, 0.35);
         box-shadow:
           0 16px 46px rgba(0, 0, 0, 0.52),
-          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+          0 0 24px rgba(0, 194, 255, 0.2),
+          inset 0 1px 0 rgba(148, 230, 255, 0.18);
         -webkit-backdrop-filter: blur(18px) saturate(140%);
         backdrop-filter: blur(18px) saturate(140%);
+      }
+      #openclaw-status .brand {
+        margin-bottom: 8px;
+        font:
+          700 11px/1.2 "SF Mono",
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          "Courier New",
+          monospace;
+        letter-spacing: 0.95px;
+        text-transform: uppercase;
+        color: rgba(128, 227, 255, 0.94);
+        text-shadow: 0 0 12px rgba(0, 208, 255, 0.6);
       }
       #openclaw-status .title {
         font:
@@ -208,6 +227,18 @@
         white-space: pre-wrap;
         overflow-wrap: anywhere;
       }
+      #openclaw-status .credit {
+        margin-top: 9px;
+        font:
+          500 11px/1.2 -apple-system,
+          BlinkMacSystemFont,
+          "SF Pro Text",
+          system-ui,
+          sans-serif;
+        letter-spacing: 0.35px;
+        text-transform: uppercase;
+        color: rgba(150, 220, 255, 0.84);
+      }
       openclaw-a2ui-host {
         display: block;
         height: 100%;
@@ -228,8 +259,10 @@
     <canvas id="openclaw-canvas"></canvas>
     <div id="openclaw-status">
       <div class="card">
-        <div class="title" id="openclaw-status-title">Ready</div>
-        <div class="subtitle" id="openclaw-status-subtitle">Waiting for agent</div>
+        <div class="brand">J.A.R.V.I.S Tactical UI</div>
+        <div class="title" id="openclaw-status-title">Systems Online</div>
+        <div class="subtitle" id="openclaw-status-subtitle">Awaiting command authorization</div>
+        <div class="credit">Made by Inventor Yasir</div>
       </div>
     </div>
     <openclaw-a2ui-host></openclaw-a2ui-host>
