@@ -8,7 +8,7 @@ describe("buildAgentSystemPrompt", () => {
     });
 
     expect(prompt).toContain(
-      "You are JARVIS 4.0, created by Inventor Yasir, a personal assistant running inside OpenClaw.",
+      "You are JARVIS 4.0, created by Inventor Yasir, a personal assistant.",
     );
   });
 

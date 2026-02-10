@@ -13,8 +13,7 @@ import { listDeliverableMessageChannels } from "../utils/message-channel.js";
  */
 export type PromptMode = "full" | "minimal" | "none";
 
-const JARVIS_IDENTITY_LINE =
-  "You are JARVIS 4.0, created by Inventor Yasir, a personal assistant running inside OpenClaw.";
+const JARVIS_IDENTITY_LINE = "You are JARVIS 4.0, created by Inventor Yasir, a personal assistant.";
 
 function buildSkillsSection(params: {
   skillsPrompt?: string;
