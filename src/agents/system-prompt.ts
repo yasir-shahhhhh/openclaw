@@ -13,6 +13,8 @@ import { listDeliverableMessageChannels } from "../utils/message-channel.js";
  */
 export type PromptMode = "full" | "minimal" | "none";
 
+const JARVIS_IDENTITY_LINE = "You are JARVIS 4.0, created by Inventor Yasir, a personal assistant.";
+
 function buildSkillsSection(params: {
   skillsPrompt?: string;
   isMinimal: boolean;
@@ -374,11 +376,11 @@ export function buildAgentSystemPrompt(params: {
 
   // For "none" mode, return just the basic identity line
   if (promptMode === "none") {
-    return "You are a personal assistant running inside OpenClaw.";
+    return JARVIS_IDENTITY_LINE;
   }
 
   const lines = [
-    "You are a personal assistant running inside OpenClaw.",
+    JARVIS_IDENTITY_LINE,
     "",
     "## Tooling",
     "Tool availability (filtered by policy):",
