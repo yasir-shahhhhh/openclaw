@@ -378,3 +378,11 @@ pnpm clawdbot agent --message "Verification: Upstream sync and macOS rebuild com
 
 echo "==> Done! Check Telegram for verification message, then run 'git push --force-with-lease' when ready."
 ```
+
+
+
+
+
+
+
+Still is development new features are upcomming 
